@@ -1,24 +1,21 @@
-# Workshop: Dive Into Microservices
-
-
-## Requirements
+# Requirements
 
 The following software is required in order to follow the projects of this workshop:
 
-### General
+## General
 
 OS specific helper tools to install software more easily.
 
-#### Windows
+### Windows
 
 Install the package manager [Chocolatey](https://chocolatey.org/install) by using cmd or PowerShell.
 
-#### MacOS
+### MacOS
 
 Install the package manager [homebrew](http://brew.sh/) by using the Terminal.
 
 
-### Java 8 (JRE or JDK)
+## Java 8 (JRE or JDK)
   * Windows: `choco install jre8`
   * MacOS: `brew update && brew cask install java`
   * Linux: [Download & install](https://www.java.com/en/download/help/linux_x64_install.xml)
@@ -31,7 +28,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
 ```
 
-### Maven
+## Maven
   * Windows: `choco install maven`
   * MacOS: `brew update && brew install maven`
   * Linux: `sudo apt-get install maven` (Ubuntu)
@@ -47,13 +44,13 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "mac os x", version: "10.11.5", arch: "x86_64", family: "mac"
 ```
 
-### Eclipse IDE
+## Eclipse IDE
   ![Download Eclipse](images/eclipse_download.jpg)
   1. Choose your OS
   2. Download "Eclipse IDE for Java Developers" with the link on the right
   3. Extract the archive and you are done (you can start Eclipse by clicking the ![Eclipse executable](images/eclipse_executable.jpg) executable)
 
-### Docker
+## Docker
 
 * Windows
   * [64bit Windows 10 Pro, Enterprise and Education](https://docs.docker.com/docker-for-windows/) ★
@@ -70,7 +67,7 @@ Verify if *docker* is working by running `docker --version` in the terminal. It 
 ```
 Docker version 1.13.0, build 49bf474
 ```
-### Docker Compose
+## Docker Compose
 
 You only have to do the following steps if you have one of the following systems + version:
 
@@ -96,7 +93,7 @@ Verify if *docker-compose* is working by running `docker-compose --version` in t
 docker-compose version 1.10.0, build 4bd6f1a
 ```
 
-### MongoChef
+## MongoChef
 
 GUI for MongoDB.
 
@@ -110,6 +107,8 @@ GUI for MongoDB.
 
 ---
 
+
+# Workshop: Dive Into Microservices
 
 
 ## What is a Microservice?
