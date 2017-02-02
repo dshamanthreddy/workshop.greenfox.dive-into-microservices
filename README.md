@@ -20,7 +20,7 @@ Install the package manager [homebrew](http://brew.sh/) by using the Terminal.
   * MacOS: `brew update && brew cask install java`
   * Linux: [Download & install](https://www.java.com/en/download/help/linux_x64_install.xml)
 
-Verify if Java is working by running `java -version` in the terminal. It should give oyu an output similar to this:
+Verify if Java is working by running `java -version` in the terminal. It should give you an output similar to this:
 
 ```
 java version "1.8.0_102"
