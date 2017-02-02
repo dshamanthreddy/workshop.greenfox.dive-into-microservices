@@ -4,7 +4,8 @@ The following software is required in order to follow the projects of this works
 
 ## General
 
-OS specific helper tools to install software more easily.
+* Download the [docker images (activemq.tar & mongo.tar) from Google Drive](https://drive.google.com/drive/folders/0B2mQ6hpDchcQLU5ud0pMZFhPTk0?usp=sharing)
+* Use these OS specific helper tools to install software more easily:
 
 ### Windows
 
@@ -20,7 +21,7 @@ Install the package manager [homebrew](http://brew.sh/) by using the Terminal.
   * MacOS: `brew update && brew cask install java`
   * Linux: [Download & install](https://www.java.com/en/download/help/linux_x64_install.xml)
 
-Verify if Java is working by running `java -version` in the terminal. It should give oyu an output similar to this:
+Verify if Java is working by running `java -version` in the terminal. It should give you an output similar to this:
 
 ```
 java version "1.8.0_102"
@@ -134,7 +135,7 @@ GUI for MongoDB.
 
 ## Microservices at Synoa
 
-* How can these technologies combined to create a microservice?
+* How can these technologies be combined to create a microservice?
 * At Synoa we use the following technolgies to create Microservices for mid-sized companies:
 
 ### Maven
