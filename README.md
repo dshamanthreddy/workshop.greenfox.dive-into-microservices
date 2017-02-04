@@ -116,14 +116,6 @@ GUI for MongoDB.
 
 * Basic idea
 * Monolith vs Microservices
-  * Organize tasks
-  * Scalability
-* History
-* What other principles are there
-  * ESB
-  * SOA
-* Deployment
-* Monitoring
 * Amazon
 * Netflix
 
@@ -135,16 +127,26 @@ GUI for MongoDB.
 
 ## Microservices at Synoa
 
-* How can these technologies be combined to create a microservice?
 * At Synoa we use the following technolgies to create Microservices for mid-sized companies:
+
 
 ### Maven
 
 * Build automation and dependency management
 
+
 ### Apache Camel
 
 * Rule-based routing and mediation engine that provides an API to use Enterprise Integration Patterns
+
+
+### Docker
+
+* Software container, virtualization
+* Hello World
+* docker-compose
+* Start MongoDB
+
 
 ### MongoDB
 
@@ -156,14 +158,6 @@ GUI for MongoDB.
 * Message broker based on Java Message Service (JMS)
 
 
-### Docker
-
-* Software container, virtualization
-* Hello World
-* docker-compose
-* Start MongoDB
-
-
 
 ---
 
@@ -171,23 +165,27 @@ GUI for MongoDB.
 
 ## Projects
 
-### Microservice 1: Customer into MongoDB
+### Microservice 1: Import customers
 
 * Read a XML file with customer data
 * Transform the data
 * Save the data into MongoDB
-* Automatically read the XML file when it gets changed
+* Send a message to ActiveMQ
 
 
-### Microservice 2: Customer API
+### Microservice 2: Transform customers
 
-* Read the customer data from MongoDB
+* Read a message from ActiveMQ
+* Read the imported customer from MongoDB
+* Split the customer-list into single transformed customers
+* Save the transformed customers into MongoDB
+
+
+### Microservice 3: Customer API
+
+* Read the transformed customers from MongoDB
 * Create a REST API
 
-
-### Extra: Let's talk
-
-* Send messages between Microservice 1 & 2
 
 
 ---
@@ -196,4 +194,5 @@ GUI for MongoDB.
 
 ## Resources
 
-*
+* https://martinfowler.com/microservices
+* https://www.youtube.com/watch?v=wgdBVIX9ifA

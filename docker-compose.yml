@@ -1,0 +1,25 @@
+version: '2'
+services:
+
+  activemq:
+    container_name: synoa_workshop_activemq
+    image: webcenter/activemq:5.13.2
+    volumes:
+      - ".data/activemq:/data/activemq"
+    ports:
+        - "8161:8161"
+        - "61616:61616"
+    environment:
+      ACTIVEMQ_ENABLED_AUTH: "false"
+      ACTIVEMQ_ADMIN_LOGIN: "admin"
+      ACTIVEMQ_ADMIN_PASSWORD: "password"
+
+
+  mongodb:
+    container_name: synoa_workshop_mongodb
+    image: mongo:3.2
+    volumes:
+        - ".data/mongodb:/data/db"
+    ports:
+        - "27017:27017"
+    command: '--storageEngine wiredTiger'
