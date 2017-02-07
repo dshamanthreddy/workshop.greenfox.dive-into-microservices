@@ -2,11 +2,48 @@
 
 We would like to thank all of you who attended the workshop. It was amazing for us to see so many people interested in the concept of microservices and how we at [Synoa](https://synoa.de) handle them in Java.
 
+**TOC**
+
+* [Dive Into Microservices](#dive-into-microservices)
+* [Feedback](#feedback)
+* [Slides](#slides)
+* [Resources](#resources)
+  * [Microservices](#microservices)
+  * [MongoDB](#mongodb)
+  * [Docker](#docker)
+  * [Apache ActiveMQ](#apache-activemq)
+  * [Apache Camel](#apache-camel)
+  * [Maven](#maven)
+* [Workshop](#workshop)
+  * [FAQ &amp; help](#faq--help)
+    * [How to run docker\-compose to start MongoDB &amp; ActiveMQ?](#how-to-run-docker-compose-to-start-mongodb--activemq)
+    * [I don't have the database from the workshop :(](#i-dont-have-the-database-from-the-workshop-)
+    * [How to see the content of MongoDB](#how-to-see-the-content-of-mongodb)
+    * [How to start a microservices](#how-to-start-a-microservices)
+    * [How to access the ActiveMQ web interface?](#how-to-access-the-activemq-web-interface)
+  * [Projects](#projects)
+    * [Microservice 0: Hello World](#microservice-0-hello-world)
+    * [Microservice 1: Import customers](#microservice-1-import-customers)
+    * [Microservice 2: Transform customers](#microservice-2-transform-customers)
+      * [Task: fax not null](#task-fax-not-null)
+    * [Microservice 3: Customer API](#microservice-3-customer-api)
+      * [Task: Return a customer based on the customernumber](#task-return-a-customer-based-on-the-customernumber)
+* [Software requirements](#software-requirements)
+  * [General](#general)
+    * [Windows](#windows)
+    * [MacOS](#macos)
+  * [Java 8 (JDK)](#java-8-jdk)
+  * [Maven](#maven-1)
+  * [Eclipse IDE](#eclipse-ide)
+  * [Docker](#docker-1)
+  * [Docker Compose](#docker-compose)
+  * [MongoChef](#mongochef)
+
 
 
 # Feedback
 
-Please take 5 minutes of your time to [give us your honest feedback](https://goo.gl/forms/TqS3PU3wrg8ivkOw1) until 13.02.2017.
+Please take 5 minutes of your time to [give us your honest feedback](https://goo.gl/forms/TqS3PU3wrg8ivkOw1).
 
 Thank you super much!
 
@@ -104,12 +141,24 @@ Build automation and dependency management
 
 # Workshop
 
-## Notes from the workshop
+## FAQ & help
 
 ### How to run docker-compose to start MongoDB & ActiveMQ?
 
 * Open a terminal and go into the directory where the `docker-compose.yml` file is
 * Execute `docker-compose up`
+
+
+### I don't have the database from the workshop :(
+
+* Create the database `workshop` with MongoChef: File / Add Database -> `workshop`
+* Import the collections (you can find them in this repository in the [database](database/) folder) by right-clicking on the database `workshop`
+  * Import collections
+  * Choose import format: JSON - mongo shell / 3T MongoChef / mongoexport
+  * Click on the "plus" icon and add the collections (customers_import.json & customers_transform.json)
+  * Click "next"
+  * Click "next"
+  * Click "Start Import"
 
 
 ### How to see the content of MongoDB
@@ -252,8 +301,8 @@ Install the package manager [Chocolatey](https://chocolatey.org/install) by usin
 Install the package manager [homebrew](http://brew.sh/) by using the Terminal.
 
 
-## Java 8 (JRE or JDK)
-  * Windows: `choco install jre8`
+## Java 8 (JDK)
+  * Windows: `choco install jdk8`
   * MacOS: `brew update && brew cask install java`
   * Linux: [Download & install](https://www.java.com/en/download/help/linux_x64_install.xml)
 
