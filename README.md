@@ -191,7 +191,7 @@ Build automation and dependency management
 
 ### Microservice 0: Hello World
 
-Project: [microservice.hello-world](projcets/microservice.hello-world)
+Project: [microservice.hello-world](projects/microservice.hello-world)
 
 
 ### Microservice 1: Import customers
