@@ -196,7 +196,7 @@ Project: [microservice.hello-world](projcets/microservice.hello-world)
 
 ### Microservice 1: Import customers
 
-Project: [microservice.customer.import](projcets/microservice.customer.import)
+Project: [./projcets/microservice.customer.import](projcets/microservice.customer.import)
 
 * Read a XML file with customer data
 * Transform the data
