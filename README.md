@@ -1,4 +1,240 @@
-# Requirements
+# Dive Into Microservices
+
+We would like to thank all of you who attended the workshop. It was amazing for us to see so many people interested in the concept of microservices and how we at [Synoa](https://synoa.de) handle them in Java.
+
+
+
+# Feedback
+
+Please take 5 minutes of your time to [give us your honest feedback](https://goo.gl/forms/TqS3PU3wrg8ivkOw1) until 13.02.2017.
+
+Thank you super much!
+
+
+
+# Slides
+
+The slides [can be found here](http://slides.com/timpietrusky/dive-into-microservices#/). They cover the following topics:
+
+* What is a Microservice?
+  * Basic idea
+  * Monolith vs Microservices
+  * Amazon
+  * Netflix
+* Microservices at Synoa
+  * At Synoa we use the following technolgies to create Microservices for mid-sized companies:
+    * Maven
+    * Apache Camel
+    * Docker & Docker compose
+    * MongoDB
+    * ActiveMQ
+
+
+
+---
+
+
+
+# Resources
+
+If you want to dive even deeper into the topics and technologies we used in the workshop, we got you covered:
+
+## Microservices
+
+* [General definition of Microservices](https://www.youtube.com/watch?v=wgdBVIX9ifA)
+* [Microservices at Netflix Scale](https://www.youtube.com/watch?v=57UK46qfBLY)
+* [From Monolith to Microservices at Zalando](https://www.youtube.com/watch?v=gEeHZwjwehs)
+* [Microservices @ Spotify](https://www.youtube.com/watch?v=7LGPeBgNFuU)
+* https://martinfowler.com/microservices
+
+
+## MongoDB
+
+A non-relational NoSQL database.
+
+* [mongodb.com](https://www.mongodb.com)
+* [MongoDB in 30 minutes](https://www.youtube.com/watch?v=pWbMrx5rVBE)
+* [Introduction to NoSQL databases](https://www.youtube.com/watch?v=qI_g07C_Q5I)
+
+
+## Docker
+
+Software container, virtualization
+
+* [docker.com](https://www.docker.com/)
+* [What is Docker & Docker Containers, Images, etc?](https://www.youtube.com/watch?v=pGYAg7TMmp0)
+* [An introduction to Docker Compose](https://www.youtube.com/watch?v=k900NVwFfcA)
+* [Full-stack JavaScript development with Docker](https://www.youtube.com/watch?v=zcSbOl8DYXM) - It explains Docker & docker-compose in depth and it adapts to any programming language
+
+* [Docker Hub](https://hub.docker.com/) - Repository of docker images
+
+
+## Apache ActiveMQ
+
+Message broker based on Java Message Service (JMS).
+
+* [activemq.apache.org](http://activemq.apache.org/)
+* [What is JMS?](https://www.youtube.com/watch?v=lsAyTeUUXHk) - The first 2:45 minutes are enough
+  * ActiveMQ implements [JMS (Java Message Service)](https://en.wikipedia.org/wiki/Java_Message_Service).
+* [Introduction to ActiveMQ](https://www.youtube.com/watch?v=s-E_V5Xyg6k) - The first 15 minutes are enough
+
+
+## Apache Camel
+
+Rule-based routing and mediation engine that provides an API to use Enterprise Integration Patterns.
+
+* [camel.apache.org](http://camel.apache.org/)
+* [Article: Introduction into ActiveMQ](https://dzone.com/articles/open-source-integration-apache)
+* [Integration made easy with Apache Camel](https://www.youtube.com/watch?v=quGG8aG6ka8)
+* [Free chapter of the book "Apache Camel in Action"](https://manning-content.s3.amazonaws.com/download/f/737b721-0f60-4ba9-bb1f-7a27c4a4532b/chapter1sample.pdf) or [here](https://www.manning.com/books/camel-in-action#downloads)
+* [A list of all available components](http://camel.apache.org/components.html)
+
+
+## Maven
+
+Build automation and dependency management
+
+* [maven.apache.org](https://maven.apache.org/)
+* [What is Maven?](https://maven.apache.org/what-is-maven.html)
+
+
+
+---
+
+
+# Workshop
+
+## Notes from the workshop
+
+### How to run docker-compose to start MongoDB & ActiveMQ?
+
+* Open a terminal and go into the directory where the `docker-compose.yml` file is
+* Execute `docker-compose up`
+
+
+### How to see the content of MongoDB
+
+* Open the app **MongoChef**
+* Create a new connection with the following data:
+  * Host: `localhost`
+    * Or `192.168.99.100` if you use Windows and `localhost` is not working
+  * Port: 27017
+
+
+### How to start a microservices
+
+* Open a terminal and go into the directory of the microservice you want to start, for example `projects/microservice.customer.import`
+* Execute `mvn spring-boot:run`
+
+
+### How to access the ActiveMQ web interface?
+
+* Open `http://localhost:8161/admin/queues.jsp` in the browser and use the following data to login:
+  * Username: `admin`
+  * Password: `admin`
+* There you find the generated queues
+
+
+---
+
+
+## Projects
+
+### Microservice 0: Hello World
+
+Project: [microservice.hello-world](projcets/microservice.hello-world)
+
+
+### Microservice 1: Import customers
+
+Project: [microservice.customer.import](projcets/microservice.customer.import)
+
+* Read a XML file with customer data
+* Transform the data
+* Save the data into MongoDB
+* Send a message to ActiveMQ
+
+
+### Microservice 2: Transform customers
+
+Project: [microservice.customer.transform](projcets/microservice.customer.transform)
+
+* Read a message from ActiveMQ
+* Read the imported customer from MongoDB
+* Split the customer-list into single transformed customers
+* Save the transformed customers into MongoDB
+
+#### Task: fax not null
+
+* If the `fax` of a customer is `null`, it should be replaced with a String of your choice
+
+**Solution**
+
+* You have to edit the file `src/main/java/de/synoa/workshop/handler/TransformRawCustomerHandler.java`
+* and add the following lines before `// Add the customer to the result`:
+
+```
+if (customer.get("fax") == null) {
+    customer.append("fax", "😱");
+}
+```
+
+
+### Microservice 3: Customer API
+
+Project: [microservice.customer.api](projcets/microservice.customer.api)
+
+* Read the transformed customers from MongoDB
+* Create a REST API
+
+#### Task: Return a customer based on the customernumber
+
+* Implement the API to return a customer based on it's customernumber as JSON
+* You can open the API by calling http://localhost:8092/api/customer/HUNG
+* Hint: The 2. microservice [microservice.customer.transform](projcets/microservice.customer.transform) already contains a way to read documents from MongoDB
+
+**Solution**
+
+* Extend the route `src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java` with the following content:
+
+```
+from("direct:customer")
+    // Create the query
+    .bean(ReadCustomerHandler.class)
+
+    // Read the customer from MongoDB
+    .to("mongodb:mongodbConfig?database={{mongodb.database}}&collection=customers_transformed&operation=findOneByQuery")
+;
+```
+
+* Create a new handler in the package `de.synoa.workshop.handler` with the name `ReadCustomerHandler` with the following content:
+
+```
+package de.synoa.workshop.handler;
+
+import org.apache.camel.Handler;
+import org.apache.camel.Header;
+
+import com.mongodb.BasicDBObject;
+
+public class ReadCustomerHandler {
+
+    @Handler
+    public BasicDBObject handle(@Header(value = "id") String customernumber) {
+        BasicDBObject query = new BasicDBObject("customernumber", customernumber);
+
+        return query;
+    }
+}
+```
+
+
+
+---
+
+
+
+# Software requirements
 
 The following software is required in order to follow the projects of this workshop:
 
@@ -103,96 +339,3 @@ GUI for MongoDB.
 * [Windows](http://3t.io/mongochef/download/core/platform/#tab-id-1)
 * [MacOS](http://3t.io/mongochef/download/core/platform/#tab-id-2)
 * [Linux](http://3t.io/mongochef/download/core/platform/#tab-id-3)
-
-
-
----
-
-
-# Workshop: Dive Into Microservices
-
-
-## What is a Microservice?
-
-* Basic idea
-* Monolith vs Microservices
-* Amazon
-* Netflix
-
-
-
----
-
-
-
-## Microservices at Synoa
-
-* At Synoa we use the following technolgies to create Microservices for mid-sized companies:
-
-
-### Maven
-
-* Build automation and dependency management
-
-
-### Apache Camel
-
-* Rule-based routing and mediation engine that provides an API to use Enterprise Integration Patterns
-
-
-### Docker
-
-* Software container, virtualization
-* Hello World
-* docker-compose
-* Start MongoDB
-
-
-### MongoDB
-
-* Relation vs non-relational (NoSQL) databases
-
-
-### ActiveMQ
-
-* Message broker based on Java Message Service (JMS)
-
-
-
----
-
-
-
-## Projects
-
-### Microservice 1: Import customers
-
-* Read a XML file with customer data
-* Transform the data
-* Save the data into MongoDB
-* Send a message to ActiveMQ
-
-
-### Microservice 2: Transform customers
-
-* Read a message from ActiveMQ
-* Read the imported customer from MongoDB
-* Split the customer-list into single transformed customers
-* Save the transformed customers into MongoDB
-
-
-### Microservice 3: Customer API
-
-* Read the transformed customers from MongoDB
-* Create a REST API
-
-
-
----
-
-
-
-## Resources
-
-* https://martinfowler.com/microservices
-* https://www.youtube.com/watch?v=wgdBVIX9ifA
