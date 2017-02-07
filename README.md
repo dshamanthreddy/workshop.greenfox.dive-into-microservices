@@ -196,7 +196,7 @@ Project: [microservice.hello-world](projects/microservice.hello-world)
 
 ### Microservice 1: Import customers
 
-Project: [microservice.customer.import](./projcets/microservice.customer.import)
+Project: [microservice.customer.import](projects/microservice.customer.import)
 
 * Read a XML file with customer data
 * Transform the data
@@ -206,7 +206,7 @@ Project: [microservice.customer.import](./projcets/microservice.customer.import)
 
 ### Microservice 2: Transform customers
 
-Project: [microservice.customer.transform](projcets/microservice.customer.transform)
+Project: [microservice.customer.transform](projects/microservice.customer.transform)
 
 * Read a message from ActiveMQ
 * Read the imported customer from MongoDB
@@ -219,7 +219,7 @@ Project: [microservice.customer.transform](projcets/microservice.customer.transf
 
 **Solution**
 
-* You have to edit the file `src/main/java/de/synoa/workshop/handler/TransformRawCustomerHandler.java`
+* You have to edit the file [TransformRawCustomerHandler](src/main/java/de/synoa/workshop/handler/TransformRawCustomerHandler.java)
 * and add the following lines before `// Add the customer to the result`:
 
 ```
@@ -231,7 +231,7 @@ if (customer.get("fax") == null) {
 
 ### Microservice 3: Customer API
 
-Project: [microservice.customer.api](projcets/microservice.customer.api)
+Project: [microservice.customer.api](projects/microservice.customer.api)
 
 * Read the transformed customers from MongoDB
 * Create a REST API
@@ -240,11 +240,11 @@ Project: [microservice.customer.api](projcets/microservice.customer.api)
 
 * Implement the API to return a customer based on it's customernumber as JSON
 * You can open the API by calling http://localhost:8092/api/customer/HUNG
-* Hint: The 2. microservice [microservice.customer.transform](projcets/microservice.customer.transform) already contains a way to read documents from MongoDB
+* Hint: The 2. microservice [microservice.customer.transform](projects/microservice.customer.transform) already contains a way to read documents from MongoDB
 
 **Solution**
 
-* Extend the route `src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java` with the following content:
+* Extend the route [RestRouteBuilder.java](src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java) with the following content:
 
 ```
 from("direct:customer")
