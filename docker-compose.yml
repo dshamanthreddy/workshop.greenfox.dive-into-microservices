@@ -12,7 +12,7 @@ services:
     environment:
       ACTIVEMQ_ENABLED_AUTH: "false"
       ACTIVEMQ_ADMIN_LOGIN: "admin"
-      ACTIVEMQ_ADMIN_PASSWORD: "password"
+      ACTIVEMQ_ADMIN_PASSWORD: "admin"
 
 
   mongodb:
