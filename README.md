@@ -244,7 +244,7 @@ Project: [microservice.customer.api](projects/microservice.customer.api)
 
 **Solution**
 
-* Extend the route [RestRouteBuilder.java](projects/microservice.customer.transform/src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java) with the following content:
+* Extend the route [RestRouteBuilder.java](projects/microservice.customer.api/src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java) with the following content:
 
 ```
 from("direct:customer")
