@@ -222,7 +222,7 @@ Project: [microservice.customer.transform](projects/microservice.customer.transf
 * You have to edit the file [TransformRawCustomerHandler](projects/microservice.customer.transform/src/main/java/de/synoa/workshop/handler/TransformRawCustomerHandler.java)
 * and add the following lines before `// Add the customer to the result`:
 
-```
+```java
 if (customer.get("fax") == null) {
     customer.append("fax", "😱");
 }
@@ -246,7 +246,7 @@ Project: [microservice.customer.api](projects/microservice.customer.api)
 
 * Extend the route [RestRouteBuilder.java](projects/microservice.customer.api/src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java) with the following content:
 
-```
+```java
 from("direct:customer")
     // Create the query
     .bean(ReadCustomerHandler.class)
@@ -258,7 +258,7 @@ from("direct:customer")
 
 * Create a new handler in the package `de.synoa.workshop.handler` with the name `ReadCustomerHandler` with the following content:
 
-```
+```java
 package de.synoa.workshop.handler;
 
 import org.apache.camel.Handler;
@@ -308,7 +308,7 @@ Install the package manager [homebrew](http://brew.sh/) by using the Terminal.
 
 Verify if Java is working by running `java -version` in the terminal. It should give you an output similar to this:
 
-```
+```bash
 java version "1.8.0_102"
 Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
@@ -321,7 +321,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
 
 Verify if maven is working by running `mvn -version` in the terminal. It should give you an output similar to this:
 
-```
+```bash
 Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T17:41:47+01:00)
 Maven home: /usr/local/Cellar/maven/3.3.9/libexec
 Java version: 1.8.0_102, vendor: Oracle Corporation
