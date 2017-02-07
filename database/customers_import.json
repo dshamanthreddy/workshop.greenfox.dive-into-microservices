@@ -1,0 +1,280 @@
+{ 
+    "_id" : ObjectId("5895d2214420b04f11075044"), 
+    "file_name" : "customers.xml", 
+    "last_modified" : ISODate("2017-02-02T20:07:23.000+0000"), 
+    "read" : ISODate("2017-02-04T13:07:44.918+0000"), 
+    "content" : {
+        "customer" : [
+            {
+                "companyName" : "Great Lakes Food Market", 
+                "contactName" : "Howard Snyder", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(503) 555-7555", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "2732 Baker Blvd.", 
+                    "city" : "Eugene", 
+                    "region" : "OR", 
+                    "postalCode" : "97403", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "GREAL"
+            }, 
+            {
+                "companyName" : "Hungry Coyote Import Store", 
+                "contactName" : "Yoshi Latimer", 
+                "contactTitle" : "Sales Representative", 
+                "phone" : "(503) 555-6874", 
+                "fax" : "(503) 555-2376", 
+                "fullAddress" : {
+                    "address" : "City Center Plaza 516 Main St.", 
+                    "city" : "Elgin", 
+                    "region" : "OR", 
+                    "postalCode" : "97827", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "HUNGC"
+            }, 
+            {
+                "companyName" : "Lazy K Kountry Store", 
+                "contactName" : "John Steel", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(509) 555-7969", 
+                "fax" : "(509) 555-6221", 
+                "fullAddress" : {
+                    "address" : "12 Orchestra Terrace", 
+                    "city" : "Walla Walla", 
+                    "region" : "WA", 
+                    "postalCode" : "99362", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LAZYK"
+            }, 
+            {
+                "companyName" : "Let's Stop N Shop", 
+                "contactName" : "Jaime Yorres", 
+                "contactTitle" : "Owner", 
+                "phone" : "(415) 555-5938", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "87 Polk St. Suite 5", 
+                    "city" : "San Francisco", 
+                    "region" : "CA", 
+                    "postalCode" : "94117", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LETSS"
+            }
+        ]
+    }
+}
+{ 
+    "_id" : ObjectId("5895d2ea4420b04f11075045"), 
+    "file_name" : "customers.xml", 
+    "last_modified" : ISODate("2017-02-02T20:07:23.000+0000"), 
+    "read" : ISODate("2017-02-04T13:11:06.299+0000"), 
+    "content" : {
+        "customer" : [
+            {
+                "companyName" : "Great Lakes Food Market", 
+                "contactName" : "Howard Snyder", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(503) 555-7555", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "2732 Baker Blvd.", 
+                    "city" : "Eugene", 
+                    "region" : "OR", 
+                    "postalCode" : "97403", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "GREAL"
+            }, 
+            {
+                "companyName" : "Hungry Coyote Import Store", 
+                "contactName" : "Yoshi Latimer", 
+                "contactTitle" : "Sales Representative", 
+                "phone" : "(503) 555-6874", 
+                "fax" : "(503) 555-2376", 
+                "fullAddress" : {
+                    "address" : "City Center Plaza 516 Main St.", 
+                    "city" : "Elgin", 
+                    "region" : "OR", 
+                    "postalCode" : "97827", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "HUNGC"
+            }, 
+            {
+                "companyName" : "Lazy K Kountry Store", 
+                "contactName" : "John Steel", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(509) 555-7969", 
+                "fax" : "(509) 555-6221", 
+                "fullAddress" : {
+                    "address" : "12 Orchestra Terrace", 
+                    "city" : "Walla Walla", 
+                    "region" : "WA", 
+                    "postalCode" : "99362", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LAZYK"
+            }, 
+            {
+                "companyName" : "Let's Stop N Shop", 
+                "contactName" : "Jaime Yorres", 
+                "contactTitle" : "Owner", 
+                "phone" : "(415) 555-5938", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "87 Polk St. Suite 5", 
+                    "city" : "San Francisco", 
+                    "region" : "CA", 
+                    "postalCode" : "94117", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LETSS"
+            }
+        ]
+    }
+}
+{ 
+    "_id" : ObjectId("5895d3724420b04f29d8116e"), 
+    "file_name" : "customers.xml", 
+    "last_modified" : ISODate("2017-02-02T20:07:23.000+0000"), 
+    "read" : ISODate("2017-02-04T13:13:22.487+0000"), 
+    "content" : {
+        "customer" : [
+            {
+                "companyName" : "Great Lakes Food Market", 
+                "contactName" : "Howard Snyder", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(503) 555-7555", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "2732 Baker Blvd.", 
+                    "city" : "Eugene", 
+                    "region" : "OR", 
+                    "postalCode" : "97403", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "GREAL"
+            }, 
+            {
+                "companyName" : "Hungry Coyote Import Store", 
+                "contactName" : "Yoshi Latimer", 
+                "contactTitle" : "Sales Representative", 
+                "phone" : "(503) 555-6874", 
+                "fax" : "(503) 555-2376", 
+                "fullAddress" : {
+                    "address" : "City Center Plaza 516 Main St.", 
+                    "city" : "Elgin", 
+                    "region" : "OR", 
+                    "postalCode" : "97827", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "HUNGC"
+            }, 
+            {
+                "companyName" : "Lazy K Kountry Store", 
+                "contactName" : "John Steel", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(509) 555-7969", 
+                "fax" : "(509) 555-6221", 
+                "fullAddress" : {
+                    "address" : "12 Orchestra Terrace", 
+                    "city" : "Walla Walla", 
+                    "region" : "WA", 
+                    "postalCode" : "99362", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LAZYK"
+            }, 
+            {
+                "companyName" : "Let's Stop N Shop", 
+                "contactName" : "Jaime Yorres", 
+                "contactTitle" : "Owner", 
+                "phone" : "(415) 555-5938", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "87 Polk St. Suite 5", 
+                    "city" : "San Francisco", 
+                    "region" : "CA", 
+                    "postalCode" : "94117", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LETSS"
+            }
+        ]
+    }
+}
+{ 
+    "_id" : ObjectId("5895d4444420b04f3fd7efb3"), 
+    "file_name" : "customers.xml", 
+    "last_modified" : ISODate("2017-02-02T20:07:23.000+0000"), 
+    "read" : ISODate("2017-02-04T13:16:52.606+0000"), 
+    "content" : {
+        "customer" : [
+            {
+                "companyName" : "Great Lakes Food Market", 
+                "contactName" : "Howard Snyder", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(503) 555-7555", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "2732 Baker Blvd.", 
+                    "city" : "Eugene", 
+                    "region" : "OR", 
+                    "postalCode" : "97403", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "GREAL"
+            }, 
+            {
+                "companyName" : "Hungry Coyote Import Store", 
+                "contactName" : "Yoshi Latimer", 
+                "contactTitle" : "Sales Representative", 
+                "phone" : "(503) 555-6874", 
+                "fax" : "(503) 555-2376", 
+                "fullAddress" : {
+                    "address" : "City Center Plaza 516 Main St.", 
+                    "city" : "Elgin", 
+                    "region" : "OR", 
+                    "postalCode" : "97827", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "HUNGC"
+            }, 
+            {
+                "companyName" : "Lazy K Kountry Store", 
+                "contactName" : "John Steel", 
+                "contactTitle" : "Marketing Manager", 
+                "phone" : "(509) 555-7969", 
+                "fax" : "(509) 555-6221", 
+                "fullAddress" : {
+                    "address" : "12 Orchestra Terrace", 
+                    "city" : "Walla Walla", 
+                    "region" : "WA", 
+                    "postalCode" : "99362", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LAZYK"
+            }, 
+            {
+                "companyName" : "Let's Stop N Shop", 
+                "contactName" : "Jaime Yorres", 
+                "contactTitle" : "Owner", 
+                "phone" : "(415) 555-5938", 
+                "fax" : null, 
+                "fullAddress" : {
+                    "address" : "87 Polk St. Suite 5", 
+                    "city" : "San Francisco", 
+                    "region" : "CA", 
+                    "postalCode" : "94117", 
+                    "country" : "USA"
+                }, 
+                "customerID" : "LETSS"
+            }
+        ]
+    }
+}
