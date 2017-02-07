@@ -219,7 +219,7 @@ Project: [microservice.customer.transform](projects/microservice.customer.transf
 
 **Solution**
 
-* You have to edit the file [TransformRawCustomerHandler](src/main/java/de/synoa/workshop/handler/TransformRawCustomerHandler.java)
+* You have to edit the file [TransformRawCustomerHandler](projects/microservice.customer.transform/src/main/java/de/synoa/workshop/handler/TransformRawCustomerHandler.java)
 * and add the following lines before `// Add the customer to the result`:
 
 ```
@@ -244,7 +244,7 @@ Project: [microservice.customer.api](projects/microservice.customer.api)
 
 **Solution**
 
-* Extend the route [RestRouteBuilder.java](src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java) with the following content:
+* Extend the route [RestRouteBuilder.java](projects/microservice.customer.transform/src/main/java/de/synoa/workshop/routes/RestRouteBuilder.java) with the following content:
 
 ```
 from("direct:customer")
