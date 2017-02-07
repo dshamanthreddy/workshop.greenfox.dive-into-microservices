@@ -239,7 +239,7 @@ Project: [microservice.customer.api](projects/microservice.customer.api)
 #### Task: Return a customer based on the customernumber
 
 * Implement the API to return a customer based on it's customernumber as JSON
-* You can open the API by calling http://localhost:8092/api/customer/HUNG
+* You can open the API by calling [http://localhost:8092/api/customer/HUNG](http://localhost:8092/api/customer/HUNG)
 * Hint: The 2. microservice [microservice.customer.transform](projects/microservice.customer.transform) already contains a way to read documents from MongoDB
 
 **Solution**
